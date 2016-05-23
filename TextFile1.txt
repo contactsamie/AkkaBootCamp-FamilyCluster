@@ -1,0 +1,6 @@
+
+Install-Package Akka.Serialization.Wire -Pre
+Install-Package Akka.Remote
+Install-Package Akka.Cluster -pre
+Install-Package Akka.Logger.NLog
+Install-Package Google.ProtocolBuffers
