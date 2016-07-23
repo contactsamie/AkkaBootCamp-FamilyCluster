@@ -14,15 +14,15 @@ namespace FamilyCluster.FamilyFriend
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Starting FamilyFriendSyatem ...");
+            Console.WriteLine("Starting FamilyFriendSystem ...");
             var client = ConfigurationManager.AppSettings["client"];
-            using (var system = ActorSystem.Create("FamilyFriendSyatem"))
+            using (var system = ActorSystem.Create("FamilyFriendSystem"))
             {
                 while (true)
                 {
                     var message = Console.ReadLine();
                     var clientActor = system.ActorSelection(client);
-                    clientActor.Tell(new Hello("From FamilyFriendSyatem to client "+client+" : " + message), ActorRefs.NoSender);
+                    clientActor.Tell(new Hello("From FamilyFriendSystem to client "+client+" : " + message), ActorRefs.NoSender);
                 }
             }
         }
